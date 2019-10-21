@@ -19,9 +19,9 @@ class GoodCreateView(CreateView):
         context['goods'] = Goods.objects.order_by('-id')[:5]
         return context
 
-
 def end(request):
-    return render(request, template_name="revision_app/end.html")
+    context = {'goods': Goods.objects.all()}
+    return render(request, 'revision_app/end.html', context)
 
 def about(request):
     return render(request, template_name="revision_app/about.html")
