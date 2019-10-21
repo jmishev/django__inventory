@@ -1,0 +1,43 @@
+{% extends "revision_app/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form method="post">{% csrf_token %}
+    {{ form|crispy }}
+    <input style="margin-top:50px". type="submit" value="Save operation">
+    <input type="submit" value="Save all and exit">
+</form>
+<p></p>
+<div style="margin-top:50px">
+    <style>
+    #goods {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #goods td, #goods th {
+      border: 1px solid #ddd;
+      padding: 0px;
+    }
+
+    #goods tr:nth-child(even){background-color: #f2f2f2;}
+
+    #goods tr:hover {background-color: #ddd;}
+
+    #goods th {
+      padding-top: px;
+      padding-bottom: 12px;
+      text-align: center;
+      color: white;
+    }
+
+    </style>
+
+    <table id="goods", >
+        <tr><th>Name</th><th>Price</th><th>Quantity</th><th>
+        {% for good in goods %}
+                <tr><td align="right">{{ good.name }}</td><td align="right">{{ good.quantity }}</td><td align="right">{{ good.price}}</td></tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock content %}
