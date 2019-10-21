@@ -3,8 +3,8 @@
 {% block content %}
 <form method="post">{% csrf_token %}
     {{ form|crispy }}
-    <input style="margin-top:50px". type="submit" value="Save operation">
-    <input type="submit" value="Save all and exit">
+    <input style="margin-top:50px" type="submit" value="Save operation" >
+    <input type="reset" value="Save all and exit" onclick="location.href='{% url 'end' %}'">
 </form>
 <p></p>
 <div style="margin-top:50px">
@@ -28,6 +28,7 @@
       padding-top: px;
       padding-bottom: 12px;
       text-align: center;
+      background-color: #0B4C5F;
       color: white;
     }
 

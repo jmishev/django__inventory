@@ -6,11 +6,6 @@ from django.views.generic import CreateView, ListView
 from django.contrib.auth.decorators import login_required
 
 
-def Proba(request):
-    last_ten = Goods.objects.order_by('-id')[:10]
-    return render(request, 'gui/home.html', context={"goods": last_ten})
-
-
 class GoodCreateView(CreateView):
     model = Goods
     fields = ['name', 'quantity', "price"]
@@ -24,5 +19,10 @@ class GoodCreateView(CreateView):
         context['goods'] = Goods.objects.order_by('-id')[:5]
         return context
 
+
+def end(request):
+    return render(request, template_name="revision_app/end.html")
+
 def about(request):
-    return render(request, template_name="gui/about.html")
+    return render(request, template_name="revision_app/about.html")
+
