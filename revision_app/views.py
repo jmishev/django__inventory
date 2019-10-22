@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Goods
 from django.views.generic import CreateView, ListView
+from django.core.paginator import Paginator
 
 from django.contrib.auth.decorators import login_required
 
@@ -20,8 +21,11 @@ class GoodCreateView(CreateView):
         return context
 
 def end(request):
-    context = {'goods': Goods.objects.all()}
-    return render(request, 'revision_app/end.html', context)
+
+    paginator = Paginator(Goods.objects.all(), 15)
+    page = request.GET.get('page')
+    goods = paginator.get_page(page)
+    return render(request, 'revision_app/end.html', {'goods': goods})
 
 def about(request):
     return render(request, template_name="revision_app/about.html")

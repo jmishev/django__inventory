@@ -20,8 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'b^-=wz__xzhm8es&)vjiq&4*%pt0oy^3#_8vnnq5o*v6cnq==-'
-
+SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -75,12 +74,14 @@ WSGI_APPLICATION = 'revision_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# print(os.environ.get('DB_password'))
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'revision_django',
         'USER': 'root',
-        'PASSWORD': 'tik-71.Lion',
+        'PASSWORD': os.environ['DB_password'],
         'HOST': 'localhost',
         'PORT': '3306',
     }

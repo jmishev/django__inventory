@@ -12,6 +12,7 @@
     #goods {
       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       border-collapse: collapse;
+      table-layout: auto;
       width: 100%;
     }
 
@@ -26,7 +27,7 @@
 
     #goods th {
       padding-top: px;
-      padding-bottom: 12px;
+      padding-bottom: 24px;
       text-align: center;
       background-color: #0B4C5F;
       color: white;
@@ -35,7 +36,7 @@
     </style>
 
     <table id="goods", >
-        <tr><th>Name</th><th>Price</th><th>Quantity</th><th>
+        <tr><th>Name</th><th>Price</th><th>Quantity</th></tr>
         {% for good in goods %}
                 <tr><td align="right">{{ good.name }}</td><td align="right">{{ good.quantity }}</td><td align="right">{{ good.price}}</td></tr>
         {% endfor %}

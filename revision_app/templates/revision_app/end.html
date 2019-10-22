@@ -32,12 +32,30 @@
 
     </style>
 
-    <table id="goods", >
-        <tr><th>Name</th><th>Price</th><th>Quantity</th><th>
+    <table id="goods" style="margin-bottom:50px"  >
+        <tr><th>Name</th><th>Price</th><th>Quantity</th></tr>
         {% for good in goods %}
                 <tr><td align="right">{{ good.name }}</td><td align="right">{{ good.quantity }}</td><td align="right">{{ good.price}}</td></tr>
         {% endfor %}
     </table>
-</div>
+<div >
+    <div class="pagination" >
+        <span class="step-links">
+            {% if goods.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ goods.previous_page_number }}">previous</a>
+            {% endif %}
 
+            <span class="current">
+                Page {{ goods.number }} of {{ goods.paginator.num_pages }}.
+            </span>
+
+            {% if goods.has_next %}
+                <a href="?page={{ goods.next_page_number }}">next</a>
+                <a href="?page={{ goods.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+<div>
 {% endblock content %}
+
