@@ -1,1 +1,1 @@
-web: gunicorn revision_project.wsgi
+web: waitress revision_project.wsgi
