@@ -25,7 +25,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'https://inventorybg.herokuapp.com/', 'inventorybg.herokuapp.com/']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -81,14 +81,11 @@ WSGI_APPLICATION = 'revision_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'revision_django',
-        'USER': 'root',
-        'PASSWORD': os.environ['DB_password'],
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 
 # Password validation
