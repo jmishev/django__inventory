@@ -3,7 +3,7 @@
 {% block content %}
 <legend> Successfully exited, you can download your inventory file here :</legend>
 
-<input style="margin-top:50px" type="submit" value="Download"  >
+<input style="margin-top:50px" type="submit" value="Download"  onclick="location.href='{% url 'download' %}'">
 
 <div style="margin-top:50px">
     <style>
@@ -29,7 +29,7 @@
       background-color: #0B4C5F;
       color: white;
     }
-
+     {{ form|crispy }}
     </style>
 
     <table id="goods" style="margin-bottom:50px"  >

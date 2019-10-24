@@ -42,4 +42,9 @@
         {% endfor %}
     </table>
 </div>
+    <p  style="padding-top:20px" >Last five records</p>
+
+    <input style="margin-top:50px" type="submit" onclick="location.href='{% url 'delete' %}'" value="Delete last record" >
+
+
 {% endblock content %}
