@@ -8,4 +8,5 @@ urlpatterns = [
     path('end/', views.end, name='end'),
     path('download/', views.download, name='download'),
     path('delete/', views.delete, name='delete'),
-]
+
+ ]

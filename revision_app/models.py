@@ -5,7 +5,7 @@ from django.db.models import Sum
 
 
 class Goods(models.Model):
-    name = models.CharField(default='  ', max_length=200, blank=True)
+    name = models.CharField(default='  ', max_length=200, blank=True, )
     quantity = models.FloatField(default=0)
     price = models.FloatField(default=0)
 

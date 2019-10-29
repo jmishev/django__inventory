@@ -3,6 +3,7 @@
 {% block content %}
 <form method="post">{% csrf_token %}
     {{ form|crispy }}
+
     <input style="margin-top:50px" type="submit" value="Save operation" >
     <input type="reset" value="Save all and exit" onclick="location.href='{% url 'end' %}'">
 </form>
@@ -45,6 +46,11 @@
     <p  style="padding-top:20px" >Last five records</p>
 
     <input style="margin-top:50px" type="submit" onclick="location.href='{% url 'delete' %}'" value="Delete last record" >
-
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('input#id_name').focus();
+        });
+    </script>
 
 {% endblock content %}
