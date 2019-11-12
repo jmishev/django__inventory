@@ -1,11 +1,11 @@
 {% extends "revision_app/base.html" %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 {% block content %}
 <form method="post">{% csrf_token %}
     {{ form|crispy }}
-
-    <input style="margin-top:50px" type="submit" value="Save operation" >
-    <input type="reset" value="Save all and exit" onclick="location.href='{% url 'end' %}'">
+    <input type="submit" value="{% trans 'Save Operation' %}" >
+    <input type="reset" value="{% trans 'Save all and exit' %}" onclick="location.href='{% url 'end' %}'">
 </form>
 <p></p>
 <div style="margin-top:50px">
@@ -37,15 +37,15 @@
     </style>
 
     <table id="goods", >
-        <tr><th>Name</th><th>Price</th><th>Quantity</th></tr>
+        <tr><th>{% trans 'Name' %}</th><th>{% trans 'Quantity' %}</th><th>{% trans 'Price' %}</th></tr>
         {% for good in goods %}
                 <tr><td align="right">{{ good.name }}</td><td align="right">{{ good.quantity }}</td><td align="right">{{ good.price}}</td></tr>
         {% endfor %}
     </table>
 </div>
-    <p  style="padding-top:20px" >Last five records</p>
+    <p  style="padding-top:20px" >{% trans 'Last five records' %}</p>
 
-    <input style="margin-top:50px" type="submit" onclick="location.href='{% url 'delete' %}'" value="Delete last record" >
+    <input style="margin-top:50px" type="submit" onclick="location.href='{% url 'delete' %}'" value="{% trans 'Delete last record' %}" >
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript">
         $(function () {

@@ -1,3 +1,5 @@
+from decimal import Decimal
+from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils import timezone
 import datetime
@@ -6,8 +8,8 @@ from django.db.models import Sum
 
 class Goods(models.Model):
     name = models.CharField(default='  ', max_length=200, blank=True, )
-    quantity = models.FloatField(default=0)
-    price = models.FloatField(default=0)
+    quantity = models.FloatField(default=0, validators=[MinValueValidator(Decimal('0.01'))])
+    price = models.DecimalField(default=0,  decimal_places=2, max_digits=12, validators=[MinValueValidator(Decimal('0.00'))])
 
 
     def get_absolute_url(self):

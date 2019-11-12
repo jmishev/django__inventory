@@ -18,8 +18,9 @@ from django.urls import include, path
 from user import views as user_views
 from django.contrib.auth import views as auth_views
 from user import views as user_views
+from django.conf.urls.i18n import i18n_patterns
 
-urlpatterns = [
+urlpatterns = i18n_patterns(
     path('', include('revision_app.urls')),
     path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'),
@@ -47,6 +48,6 @@ urlpatterns = [
          ),
          name='password_reset_complete'),
 
-]
+)
 
 

@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-06 18:37+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\revision_app\templates\revision_app\base.html:25
+msgid "Inventory of small shop"
+msgstr "Ревизия на търговски обект"
+
+#: .\revision_app\templates\revision_app\base.html:35
+#: .\revision_app\templates\revision_app\base.html:38
+msgid "Profile"
+msgstr "Профил"
+
+#: .\revision_app\templates\revision_app\base.html:36
+msgid "Logout"
+msgstr "Излез"
+
+#: .\revision_app\templates\revision_app\base.html:39
+msgid "Register"
+msgstr "Регистрирай се"
+
+#: .\revision_app\templates\revision_app\goods_form.html:7
+msgid "Save Operation"
+msgstr "Запази операция"
+
+#: .\revision_app\templates\revision_app\goods_form.html:8
+msgid "Save all and exit"
+msgstr "Запази всичко и излез"
+
+#: .\revision_app\templates\revision_app\goods_form.html:40
+msgid "Name"
+msgstr "Стока"
+
+#: .\revision_app\templates\revision_app\goods_form.html:40
+#, fuzzy
+#| msgid "Profile"
+msgid "Price"
+msgstr "Профил"
+
+#: .\revision_app\templates\revision_app\goods_form.html:40
+msgid "Quantity"
+msgstr "Количество"
+
+#: .\revision_app\templates\revision_app\goods_form.html:46
+msgid "Last five records"
+msgstr "Последни пет операции"
+
+#: .\revision_app\templates\revision_app\goods_form.html:48
+msgid "Delete last record"
+msgstr "Изтрий последната операция"
+
+#~ msgid "Let's translate this"
+#~ msgstr "Нека преведем това"
