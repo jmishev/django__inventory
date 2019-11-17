@@ -2,6 +2,7 @@
 {% load crispy_forms_tags %}
 {% load i18n %}
 {% block content %}
+
 <form method="post">{% csrf_token %}
     {{ form|crispy }}
     <input type="submit" value="{% trans 'Save Operation' %}" >
@@ -45,12 +46,14 @@
 </div>
     <p  style="padding-top:20px" >{% trans 'Last five records' %}</p>
 
-    <input style="margin-top:50px" type="submit" onclick="location.href='{% url 'delete' %}'" value="{% trans 'Delete last record' %}" >
+    <input style="margin-top:20px" type="submit" onclick="location.href='{% url 'delete' %}'" value="{% trans 'Delete last record' %}" >
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript">
         $(function () {
             $('input#id_name').focus();
         });
     </script>
+                {% get_language_info_list for LANGUAGES as languages %}
+
 
 {% endblock content %}

@@ -1,9 +1,11 @@
 {% extends "revision_app/base.html" %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 {% block content %}
-<legend> Successfully exited, you can download your inventory file here :</legend>
 
-<input style="margin-top:50px" type="submit" value="Download"  onclick="location.href='{% url 'download' %}'">
+<legend>{% trans 'Successfully exited, you can download your inventory file here :' %}</legend>
+
+<input style="margin-top:50px" type="submit" value="{% trans 'Download' %}"  onclick="location.href='{% url 'download' %}'">
 
 <div style="margin-top:50px">
     <style>
@@ -33,7 +35,7 @@
     </style>
 
     <table id="goods" style="margin-bottom:50px"  >
-        <tr><th>Name</th><th>Price</th><th>Quantity</th></tr>
+        <tr><th>{% trans 'Name' %}</th><th>{% trans 'Quantity' %}</th><th>{% trans 'Price' %}</th></tr>
         {% for good in goods %}
                 <tr><td align="right">{{ good.name }}</td><td align="right">{{ good.quantity }}</td><td align="right">{{ good.price}}</td></tr>
         {% endfor %}
@@ -42,8 +44,8 @@
     <div class="pagination" >
         <span class="step-links">
             {% if goods.has_previous %}
-                <a href="?page=1">&laquo; first</a>
-                <a href="?page={{ goods.previous_page_number }}">previous</a>
+                <a href="?page=1">{% trans 'first' %}</a>
+                <a href="?page={{ goods.previous_page_number }}">{% trans 'previous' %}</a>
             {% endif %}
 
             <span class="current">
@@ -51,11 +53,10 @@
             </span>
 
             {% if goods.has_next %}
-                <a href="?page={{ goods.next_page_number }}">next</a>
-                <a href="?page={{ goods.paginator.num_pages }}">last &raquo;</a>
+                <a href="?page={{ goods.next_page_number }}">{% trans 'next' %}</a>
+                <a href="?page={{ goods.paginator.num_pages }}">{% trans 'last' %} &raquo;</a>
             {% endif %}
         </span>
     </div>
-<div>
+</div>
 {% endblock content %}
-

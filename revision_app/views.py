@@ -11,8 +11,7 @@ from django.contrib.auth.decorators import login_required
 class GoodCreateView(CreateView):
     model = Goods
     fields = ['name', 'quantity', "price"]
-    success_url = 'http://127.0.0.1/8000'
-    # template_name = "revision_app/base.html"
+    success_url = ''
 
 
     def get_context_data(self, **kwargs):

@@ -15,39 +15,39 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
+"100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: .\revision_app\templates\revision_app\base.html:25
 msgid "Inventory of small shop"
-msgstr "Ревизия на търговски обект"
+msgstr "Инвентарь магазина"
 
 #: .\revision_app\templates\revision_app\base.html:35
 #: .\revision_app\templates\revision_app\base.html:38
-#, fuzzy
-#| msgid "Price"
 msgid "Profile"
-msgstr "Профил"
+msgstr "Профиль"
 
 #: .\revision_app\templates\revision_app\base.html:36
 msgid "Logout"
-msgstr "Излез"
+msgstr "Выйти"
 
 #: .\revision_app\templates\revision_app\base.html:39
 msgid "Register"
-msgstr "Регистрирай се"
+msgstr "Rегистр"
 
 #: .\revision_app\templates\revision_app\end.html:6
 msgid "Successfully exited, you can download your inventory file here :"
-msgstr "Успешен изход, може да свалите файла с операциите от тук:"
+msgstr "Успешно завершено, вы можете скачать файл инвентаризации здесь: "
 
 #: .\revision_app\templates\revision_app\end.html:8
 msgid "Download"
-msgstr "Свали"
+msgstr "Скачать"
 
 #: .\revision_app\templates\revision_app\end.html:38
 #: .\revision_app\templates\revision_app\goods_form.html:40
 msgid "Name"
-msgstr "Стока"
+msgstr "Имя"
 
 #: .\revision_app\templates\revision_app\end.html:38
 #: .\revision_app\templates\revision_app\goods_form.html:40
@@ -61,32 +61,32 @@ msgstr "Цена"
 
 #: .\revision_app\templates\revision_app\end.html:47
 msgid "first"
-msgstr "първа"
+msgstr "первый"
 
 #: .\revision_app\templates\revision_app\end.html:48
 msgid "previous"
-msgstr "предишна"
+msgstr "предыдущий"
 
 #: .\revision_app\templates\revision_app\end.html:56
 msgid "next"
-msgstr "следваща"
+msgstr "следующий"
 
 #: .\revision_app\templates\revision_app\end.html:57
 msgid "last"
-msgstr "последна"
+msgstr "последний"
 
 #: .\revision_app\templates\revision_app\goods_form.html:7
 msgid "Save Operation"
-msgstr "Запази операция"
+msgstr "Сохранить операцию"
 
 #: .\revision_app\templates\revision_app\goods_form.html:8
 msgid "Save all and exit"
-msgstr "Запази всичко и излез"
+msgstr "Сохранить все и выйти"
 
 #: .\revision_app\templates\revision_app\goods_form.html:46
 msgid "Last five records"
-msgstr "Последни пет операции"
+msgstr "Последние пять записей"
 
 #: .\revision_app\templates\revision_app\goods_form.html:48
 msgid "Delete last record"
-msgstr "Изтрий последната операция"
+msgstr "Удалить последнюю запись"

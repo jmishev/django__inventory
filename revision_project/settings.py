@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'import_export',
     'crispy_forms',
     'revision_app',
     'user',
@@ -55,6 +54,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'revision_project.urls'
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.i18n',
+)
 
 TEMPLATES = [
     {
@@ -114,6 +117,13 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'bg'
 LANGUAGE_CODE = 'ru'
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('ru', 'Russian'),
+    ('bg', 'Български'),
+
+]
 
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, "locale"),
