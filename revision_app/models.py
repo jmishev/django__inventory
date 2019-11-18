@@ -8,11 +8,10 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Goods(models.Model):
-    name = models.CharField(verbose_name=_('Name'), default='  ', max_length=200, blank=True, )
-    quantity = models.FloatField(verbose_name=_('Quantity'), default=0,
-                                 validators=[MinValueValidator(Decimal('0.01'))]
+    name = models.CharField(verbose_name=_('Name'), max_length=200, blank=True, )
+    quantity = models.FloatField(verbose_name=_('Quantity'), validators=[MinValueValidator(Decimal('0.01'))]
                                  )
-    price = models.DecimalField(verbose_name=_('Price'), default=0,
+    price = models.DecimalField(verbose_name=_('Price'),
                                 decimal_places=2, max_digits=12,
                                 validators=[MinValueValidator(Decimal('0.00'))]
                                 )

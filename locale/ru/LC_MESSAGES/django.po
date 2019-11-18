@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-14 11:14+0200\n"
+"POT-Creation-Date: 2019-11-17 08:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,20 +19,38 @@ msgstr ""
 "10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
 "100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\revision_app\templates\revision_app\base.html:25
+#: .\revision_app\models.py:11
+#: .\revision_app\templates\revision_app\end.html:38
+#: .\revision_app\templates\revision_app\goods_form.html:41
+msgid "Name"
+msgstr "Имя"
+
+#: .\revision_app\models.py:12
+#: .\revision_app\templates\revision_app\end.html:38
+#: .\revision_app\templates\revision_app\goods_form.html:41
+msgid "Quantity"
+msgstr "Количество"
+
+#: .\revision_app\models.py:14
+#: .\revision_app\templates\revision_app\end.html:38
+#: .\revision_app\templates\revision_app\goods_form.html:41
+msgid "Price"
+msgstr "Цена"
+
+#: .\revision_app\templates\revision_app\base.html:26
 msgid "Inventory of small shop"
 msgstr "Инвентарь магазина"
 
-#: .\revision_app\templates\revision_app\base.html:35
-#: .\revision_app\templates\revision_app\base.html:38
+#: .\revision_app\templates\revision_app\base.html:37
+#: .\revision_app\templates\revision_app\base.html:40
 msgid "Profile"
 msgstr "Профиль"
 
-#: .\revision_app\templates\revision_app\base.html:36
+#: .\revision_app\templates\revision_app\base.html:38
 msgid "Logout"
 msgstr "Выйти"
 
-#: .\revision_app\templates\revision_app\base.html:39
+#: .\revision_app\templates\revision_app\base.html:41
 msgid "Register"
 msgstr "Rегистр"
 
@@ -43,21 +61,6 @@ msgstr "Успешно завершено, вы можете скачать фа
 #: .\revision_app\templates\revision_app\end.html:8
 msgid "Download"
 msgstr "Скачать"
-
-#: .\revision_app\templates\revision_app\end.html:38
-#: .\revision_app\templates\revision_app\goods_form.html:40
-msgid "Name"
-msgstr "Имя"
-
-#: .\revision_app\templates\revision_app\end.html:38
-#: .\revision_app\templates\revision_app\goods_form.html:40
-msgid "Quantity"
-msgstr "Количество"
-
-#: .\revision_app\templates\revision_app\end.html:38
-#: .\revision_app\templates\revision_app\goods_form.html:40
-msgid "Price"
-msgstr "Цена"
 
 #: .\revision_app\templates\revision_app\end.html:47
 msgid "first"
@@ -75,18 +78,79 @@ msgstr "следующий"
 msgid "last"
 msgstr "последний"
 
-#: .\revision_app\templates\revision_app\goods_form.html:7
+#: .\revision_app\templates\revision_app\goods_form.html:8
 msgid "Save Operation"
 msgstr "Сохранить операцию"
 
-#: .\revision_app\templates\revision_app\goods_form.html:8
+#: .\revision_app\templates\revision_app\goods_form.html:9
 msgid "Save all and exit"
 msgstr "Сохранить все и выйти"
 
-#: .\revision_app\templates\revision_app\goods_form.html:46
+#: .\revision_app\templates\revision_app\goods_form.html:47
 msgid "Last five records"
 msgstr "Последние пять записей"
 
-#: .\revision_app\templates\revision_app\goods_form.html:48
+#: .\revision_app\templates\revision_app\goods_form.html:49
 msgid "Delete last record"
 msgstr "Удалить последнюю запись"
+
+#: .\user\templates\user\login.html:10
+msgid "Log In"
+msgstr "Войти"
+
+#: .\user\templates\user\login.html:14
+msgid "Login"
+msgstr "Войти"
+
+#: .\user\templates\user\login.html:19
+msgid "Not registered yet ? "
+msgstr "Еще не зарегистрированы?"
+
+#: .\user\templates\user\login.html:19
+#, fuzzy
+#| msgid "Register"
+msgid "Register now"
+msgstr "Зарегистрируйтесь сейчас"
+
+#: .\user\templates\user\logout.html:4
+msgid "You have been logged out"
+msgstr "Вы вышли из системы"
+
+#: .\user\templates\user\logout.html:7
+msgid "Log In Again"
+msgstr "Войти снова"
+
+#: .\user\templates\user\password_reset.html:13
+msgid "Request Password Reset"
+msgstr "Запросить сброс пароля"
+
+#: .\user\templates\user\password_reset_complete.html:8
+msgid "Sign In Here"
+msgstr "Войдите здесь"
+
+#: .\user\templates\user\password_reset_confirm.html:9
+#: .\user\templates\user\password_reset_confirm.html:13
+msgid "Reset Password"
+msgstr "Сбросить пароль"
+
+#: .\user\templates\user\password_reset_done.html:6
+msgid "An email has been sent with instructions to reset your password"
+msgstr "Письмо было отправлено с инструкциями для восстановления пароля"
+
+#: .\user\templates\user\register.html:9
+msgid "Register for full functionality"
+msgstr "Зарегистрируйтесь для полной функциональности"
+
+#: .\user\templates\user\register.html:13
+msgid "Sign Up"
+msgstr "Зарегистрироваться"
+
+#: .\user\templates\user\register.html:18
+#, fuzzy
+#| msgid "Not registered yet ? "
+msgid "Already registered ? "
+msgstr "Еще не зарегистрированы?"
+
+#: .\user\templates\user\register.html:18
+msgid "Sign In"
+msgstr "Зарегистрироваться"

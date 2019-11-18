@@ -1,20 +1,21 @@
 <!DOCTY{% extends "revision_app/base.html" %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 {% block content %}
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Register for full functionality</legend>
+                <legend class="border-bottom mb-4">{% trans 'Register for full functionality' %}</legend>
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+                <button class="btn btn-outline-info" type="submit">{% trans 'Sign Up' %}</button>
             </div>
         </form>
         <div class="border-top pt-3">
             <small class="text-muted">
-                Already registered? <a class="ml-2" href="#">Sign In</a>
+                {% trans 'Already registered ? ' %}<a class="ml-2" href="#">{% trans 'Sign In' %}</a>
             </small>
         </div>
     </div>
