@@ -5,6 +5,8 @@ from django.views.generic import CreateView, ListView
 from django.core.paginator import Paginator
 import xlwt
 from django.http import HttpResponse
+from django.utils.translation import gettext
+
 from django.contrib.auth.decorators import login_required
 
 
@@ -53,11 +55,11 @@ def download(request):
     font_style.font.bold = True
 
     # column header names, you can use your own headers here
-    columns = ['Name', 'Quantity', 'Price', 'Total_Price', ]
+    columns = ['Name', 'Quantity', 'Price', gettext('Total Price'), ]
 
     # write column headers in sheet
     for col_num in range(len(columns)):
-        ws.write(row_num, col_num, columns[col_num], font_style)
+        ws.write(row_num, col_num, gettext(columns[col_num]), font_style)
 
     # Sheet body, remaining rows
     font_style = xlwt.XFStyle()

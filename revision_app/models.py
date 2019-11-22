@@ -26,8 +26,4 @@ class Goods(models.Model):
     def __str__(self):
         return self.name, self.quantity, self.price, self.total_price
 
-    def calc_total(self):
-        return Goods.objects.aggregate(Sum('total_price'))
 
-    def was_published_recently(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
