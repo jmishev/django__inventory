@@ -96,7 +96,7 @@ msgstr "Изтрий последната операция"
 
 #| msgid "Price"
 msgid "Total Price"
-msgstr "обща Цена"
+msgstr "Oбща Цена"
 
 #: .\user\templates\user\login.html:10
 msgid "Log In"
