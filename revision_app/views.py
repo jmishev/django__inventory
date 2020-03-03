@@ -9,6 +9,9 @@ from django.utils.translation import gettext
 from django.contrib.auth.decorators import login_required
 
 
+
+
+
 class GoodCreateView(CreateView):
     model = Goods
     fields = ['name', 'quantity', "price"]
